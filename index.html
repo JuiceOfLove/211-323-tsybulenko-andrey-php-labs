@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="" height="90px">
+        <div class="header__title">
+            <p>Задание для самостоятельной работы «Feedback form»</p>
+        </div>
+    </header>
+    <main>
+        <form method="post" action="https://httpbin.org/post">
+            <label for="name">Имя пользователя</label>
+            <input type="text" name="username" id="name" placeholder="Введите имя">
+
+            <label for="email">Почта</label>
+            <input type="email" id="email" name="email" placeholder="Введите почту">
+
+            <label for="feedback">Тип обращения</label>
+            <select name="feedback" id="feedback">
+                <option selected="selected" value="nothing">.....</option>
+                <option value="report">Жалоба</option>
+                <option value="offer">Предложение</option>
+                <option value="respect">Благодарность</option>
+            </select>
+
+            <label for="text">Текст обращения</label>
+            <textarea name="feedback-text" id="text" cols="15" rows="2" placeholder="Введите текст обращения"></textarea>
+
+            <label for="feedback-type">Вариант ответа</label>
+            <input type="checkbox" name="feedback-type" id="feedback-type" value="sms"> <span>sms</span>
+            <input type="checkbox" name="feedback-type" id="feedback-type" value="e-mail"> <span>e-mail</span>
+
+            <button type="submit">Submit</button>
+            <input type="button" value="Переход на 2 страницу" onclick="window.open('page.php')">
+
+        </form>
+    </main>
+    <footer>
+        Собрать сайт из двух страниц.
+    </footer>
+
+</body>
+</html>
